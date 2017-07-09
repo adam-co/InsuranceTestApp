@@ -1,0 +1,128 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Give selected inputs a border color */
+input:focus, 
+textarea:focus {
+    border-color: greenyellow;
+}
+
+/* Style dialog labels */
+.dialog-label {
+    color: seagreen
+}
+
+/* Style dialog input fields */
+.editor-field {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown-field {
+    width: 100%;
+}
+
+.city-editor-field {
+    width: 40%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.state-editor-field {
+    width: 29%;
+}
+
+.zipcode-editor-field {
+    width: 28.5%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Error message color. */
+.validation-error-message {
+    color: maroon;
+}
+
+/* Date Picker style */
+.date-picker {
+    
+}
+
+/* Handle validation border (can be overridden by Bootstrap) */
+.input-validation-error {
+    border-color:maroon;
+}
+
+/* Handle validation text color (can be overridden by Bootstrap) */
+.field-validation-error {
+    color: maroon;
+}
+
+/* Custom jQuery dialog colors */
+.custom-dialog-titlebar .ui-dialog-titlebar {
+    color: greenyellow;
+    background: seagreen;
+}
+
+.ui-dialog-titlebar-close {
+    color: greenyellow;
+    background: seagreen;
+}
+
+.custom-dialog-button {
+    color: greenyellow;
+    background: seagreen;
+}
+
+.custom-dialog-button .ui-button .ui-widget .ui-state-default .ui-corner-all {
+    color: greenyellow;
+    background: seagreen;
+}
+
+.ui-icon-custom-close-button {
+    color: greenyellow;
+    background: mediumseagreen;
+}
+
+/* Override default navbar header colors */
+
+.navbar-inverse {
+    background-color: seagreen;
+    border-color: seagreen;
+}
+
+.navbar-inverse .navbar-fixed-top {
+    background-color: seagreen;
+    border-color: seagreen;
+}
+
+.navbar-inverse .navbar-brand {
+    color: greenyellow;
+}
+
+.navbar-inverse .navbar-inverse:hover,
+.navbar-inverse .navbar-inverse:focus {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+    color: white;
+    background-color: transparent;
+}

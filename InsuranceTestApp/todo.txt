@@ -1,0 +1,9 @@
+﻿TODO:
+- Improve model validation:
+	- Check that expiration date is after effective date
+	- Determine better min/max values for strings.
+- Log server-side exceptions.
+- Implement Release mode improvements:
+	- Use minimized JavaScript files in Release mode.
+	- Append version number or date to application's JavaScript files, to force browsers to reload latest version of script.
+	- Use database migration files in Release mode.

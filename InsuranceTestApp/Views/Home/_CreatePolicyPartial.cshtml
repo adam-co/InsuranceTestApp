@@ -1,0 +1,101 @@
+﻿@using System.Web.Mvc.Html
+@using InsuranceTestApp.Enums
+@using InsuranceTestApp.Utilities
+@model  InsuranceTestApp.ViewModels.PolicyViewModel
+
+<div id="errorMessage" class="validation-error-message"></div>
+
+@Html.ValidationSummary(true)
+
+<form id="create-policy-form">
+    <div id="create-policy-form-dialog">
+        <div>
+            @Html.Label("Policy Info", new { @class = "dialog-label"})
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.PolicyNumber, new { placeholder = Html.DisplayNameFor(m => m.PolicyNumber), @class="editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PolicyNumber)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.EffectiveDate, new { placeholder = Html.DisplayNameFor(m => m.EffectiveDate), @class = "editor-field date-picker" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.EffectiveDate)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.ExpirationDate, new { placeholder = Html.DisplayNameFor(m => m.ExpirationDate), @class = "editor-field date-picker" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.ExpirationDate)
+        </div>
+
+        <br/>
+        <div>
+            @Html.LabelFor(m => m.PrimaryInsured, new { @class = "dialog-label" })
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.PrimaryInsured.Name, new { placeholder = Html.DisplayNameFor(m => m.PrimaryInsured.Name), @class = "editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PrimaryInsured.Name)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.PrimaryInsured.MailingAddress, new { placeholder = Html.DisplayNameFor(m => m.PrimaryInsured.MailingAddress), @class = "editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PrimaryInsured.MailingAddress)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.PrimaryInsured.City, new { placeholder = Html.DisplayNameFor(m => m.PrimaryInsured.City), @class = "city-editor-field" })
+            @Html.DropDownListFor(m => m.PrimaryInsured.State, Helpers.StateList, new { @class = "state-editor-field dropdown-field" })
+            @Html.TextBoxFor(m => m.PrimaryInsured.ZipCode, new { placeholder = Html.DisplayNameFor(m => m.PrimaryInsured.ZipCode), @class = "zipcode-editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PrimaryInsured.State)
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PrimaryInsured.City)
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.PrimaryInsured.ZipCode)
+        </div>
+
+        <br/>
+        <div>
+            @Html.LabelFor(m => m.Risk, new { @class = "dialog-label" })
+        </div>
+        <div>
+            @Html.DropDownList("Risk.ConstructionType", 
+                EnumHelper.GetSelectList(typeof(RiskConstructionType)),  
+                new { @class = "editor-field" })
+        </div>
+        <div>
+            @Html.DropDownListFor(m => m.Risk.YearBuilt, Helpers.YearList, new { @class = "dropdown-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.Risk.YearBuilt)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Risk.Address, new { placeholder = Html.DisplayNameFor(m => m.Risk.Address), @class = "editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.Risk.Address)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Risk.City, new { placeholder = Html.DisplayNameFor(m => m.Risk.City), @class = "city-editor-field" })
+            @Html.DropDownListFor(m => m.Risk.State, Helpers.StateList, new { @class = "state-editor-field dropdown-field" })
+            @Html.TextBoxFor(m => m.Risk.ZipCode, new { placeholder = Html.DisplayNameFor(m => m.Risk.ZipCode), @class = "zipcode-editor-field" })
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.Risk.State)
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.Risk.City)
+        </div>
+        <div>
+            @Html.ValidationMessageFor(m => m.Risk.ZipCode)
+        </div>
+    </div>
+</form>
